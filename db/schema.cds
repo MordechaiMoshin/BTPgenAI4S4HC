@@ -1,5 +1,5 @@
 namespace motymoshin_2_a2;
-
+/* */
 using { S4HCP_ServiceOrder_Odata } from '../srv/external/S4HCP_ServiceOrder_Odata.cds';
 
 entity CustomerMessage
