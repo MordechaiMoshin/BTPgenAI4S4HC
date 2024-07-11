@@ -88,6 +88,11 @@ annotate service.CustomerMessage with @(
                 Label : 'suggestedResponseCustomerLanguage',
                 Value : suggestedResponseCustomerLanguage,
             },
+            {
+                $Type : 'UI.DataField',
+                Value : S4HC_ServiceOrder_ServiceOrder,
+                Label : 'Service Order',
+            },
         ],
     },
     UI.Facets : [
@@ -127,3 +132,27 @@ annotate service.CustomerMessage with @(
     ],
 );
 
+annotate service.CustomerMessage with {
+    S4HC_ServiceOrder @Common.Text : S4HC_ServiceOrder.ServiceOrder
+};
+annotate service.CustomerMessage with {
+    S4HC_ServiceOrder @(Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'A_ServiceOrder',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : S4HC_ServiceOrder_ServiceOrder,
+                    ValueListProperty : 'ServiceOrder',
+                },
+            ],
+            Label : 'Service Order',
+        },
+        Common.ValueListWithFixedValues : true
+)};
+annotate service.A_ServiceOrder with {
+    ServiceOrder @Common.Text : {
+        $value : ServiceOrderDescription,
+        ![@UI.TextArrangement] : #TextSeparate,
+    }
+};
