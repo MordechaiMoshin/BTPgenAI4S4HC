@@ -12,7 +12,6 @@ service motymoshin_2_a2Srv
         {
             action Action1
             (
-                entity : $self not null
             );
         };
 

@@ -18,7 +18,7 @@ class motymoshin_2_a2Srv extends LCAPApplicationService {
             await productfaq_Logic(results, request);
         });
 
-        this.before('__undefined__', 'CustomerMessage', async (request) => {
+        this.before('Action1', 'CustomerMessage', async (request) => {
             await customermessage_Logic_GenerateReply(request);
         });
 
