@@ -30,7 +30,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-motymoshin_2_a2.MyApplication": "cds watch --open motymoshin_2_a2.MyApplication/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-motymoshin_2_a2.MyApplication": "cds watch --open motymoshin_2_a2.MyApplication/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-motymoshin_2_a2.ProductFAQApp": "cds watch --open motymoshin_2_a2.ProductFAQApp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -65,6 +66,7 @@
   },
   "lcap": true,
   "sapux": [
-    "app/motymoshin_2_a2.MyApplication"
+    "app/motymoshin_2_a2.MyApplication",
+    "app/motymoshin_2_a2.ProductFAQApp"
   ]
 }

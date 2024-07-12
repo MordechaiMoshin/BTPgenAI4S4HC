@@ -14,6 +14,15 @@ service motymoshin_2_a2Srv
         ServiceOrder,
         ServiceOrderDescription
     };
+
+    @odata.draft.enabled
+    entity ProductFAQ as projection on my.ProductFAQ
+    {
+            ID,
+            issue,
+            question,
+            answer
+    };
 }
 
 annotate motymoshin_2_a2Srv with @requires :
