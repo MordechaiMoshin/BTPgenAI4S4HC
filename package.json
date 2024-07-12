@@ -52,6 +52,8 @@
       },
       "S4HCP_ServiceOrder_Odata": {
         "kind": "odata-v2",
+        "csrf": true,
+        "csrfInBatch": true,        
         "model": "srv/external/S4HCP_ServiceOrder_Odata",
         "[production]": {
           "credentials": {

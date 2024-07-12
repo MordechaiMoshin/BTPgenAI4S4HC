@@ -13,6 +13,12 @@ service motymoshin_2_a2Srv
             action Action1
             (
             );
+
+            action Action2
+            (
+            );
+
+            
         };
 
     entity A_ServiceOrder as projection on S4HCP_ServiceOrder_Odata.A_ServiceOrder

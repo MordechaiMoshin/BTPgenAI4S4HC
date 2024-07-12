@@ -28,7 +28,7 @@ module.exports = async function(request) {
 	
 			// Select the closest FAQ Item
 			const relevantFAQs = await SELECT`id, issue, question, answer`
-				.from('yourname_1_a01.ProductFAQ')
+				.from('motymoshin_2_a2.ProductFAQ')
 				.where`cosine_similarity(embedding, to_real_vector(${fullMessageEmbeddingStr})) > 0.7`;
 	
 			// Construct part of the prompt for a Technical issue

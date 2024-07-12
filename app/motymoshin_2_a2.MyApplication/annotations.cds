@@ -133,7 +133,10 @@ annotate service.CustomerMessage with @(
 );
 
 annotate service.CustomerMessage with {
-    S4HC_ServiceOrder @Common.Text : S4HC_ServiceOrder.ServiceOrder
+    S4HC_ServiceOrder @Common.Text : {
+            $value : S4HC_ServiceOrder.ServiceOrder,
+            ![@UI.TextArrangement] : #TextSeparate,
+        }
 };
 annotate service.CustomerMessage with {
     S4HC_ServiceOrder @(Common.ValueList : {
@@ -161,7 +164,12 @@ annotate service.CustomerMessage with @(
         {
             $Type : 'UI.DataFieldForAction',
             Action : 'motymoshin_2_a2Srv.Action1',
-            Label : 'Action1',
+            Label : 'Generate Reply',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'motymoshin_2_a2Srv.Action2',
+            Label : 'Maintain SO',
         },
     ]
 );
