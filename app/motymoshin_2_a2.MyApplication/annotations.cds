@@ -156,3 +156,12 @@ annotate service.A_ServiceOrder with {
         ![@UI.TextArrangement] : #TextSeparate,
     }
 };
+annotate service.CustomerMessage with @(
+    UI.Identification : [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'motymoshin_2_a2Srv.Action1',
+            Label : 'Action1',
+        },
+    ]
+);
